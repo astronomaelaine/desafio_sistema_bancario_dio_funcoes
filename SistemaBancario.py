@@ -166,7 +166,11 @@ def main():
                 print("\n -------------------*****------------------- \n")
 
         elif (opcao == "lu"):
-            listar_usuarios(lista_usuario)
+            if not lista_usuario:
+                print("Não há usuários cadastrados.")
+                print("Retornando ao menu")
+            else:
+                listar_usuarios(lista_usuario)
 
         elif (opcao == "c"):
             num_conta= len(lista_contas)+1
@@ -177,7 +181,11 @@ def main():
                 print("\n -------------------*****------------------- \n")
 
         elif (opcao == "lc"):
-            listar_contas(lista_contas)
+            if not lista_contas:
+                print("Não há contas cadastrados.")
+                print("Retornando ao menu")
+            else:
+                listar_contas(lista_contas)
 
         elif (opcao == "q"):
             print("SAIR")
